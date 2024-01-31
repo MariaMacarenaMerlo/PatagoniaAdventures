@@ -1,0 +1,382 @@
+@font-face {
+    font-family: futuraPT;
+    src: url(../fonts/FuturaPTMedium.otf);
+}
+@font-face {
+    font-family: futuraPTlight;
+    src: url(../fonts/FuturaPTLight.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+/*----------------------------------------------------------generalidades---*/
+h1 {display: none;}
+h2 {
+    font-family: futuraPT;
+    margin: 2.3rem;
+    text-align: center;
+}
+h3 {
+    font-family: futuraPTlight;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+p {
+    font-family: futuraPTlight;
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+    font-family: futuraPT;
+}
+.sectionBlack {
+    color: white;
+    background-color: #070707;
+    padding: 10px;
+}
+
+.sectionWhite {
+    color:#070707;
+    background-color: white;
+    padding: 10px;
+}
+
+.contenedorResponsive {
+    max-width: 100%;
+    height: auto;
+}
+.imgResponsive {
+    width: 100%;
+    height: auto;
+}
+
+/*----------------------------------------------------------header---*/
+.navbar-nav {
+    background-color: #070707;
+}
+.nav-link{
+    color: white;
+    text-align: center;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    border-bottom: solid;
+    border-width: 1px; 
+    height: 3rem;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+header {
+    position: relative;
+    height: 100vh; /* 100% del viewport height */
+    overflow: hidden;
+  }
+  
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el tamaño del video para cubrir completamente el contenedor */
+  }
+
+.contenido-header {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    text-align: center;
+    color: white;
+    z-index: 1; /* Coloca el contenido por delante del video */
+}
+
+.logo{
+    width: 300px;
+    
+}
+
+.loguito{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+/*---------------------------------------------------------about us-*/
+
+
+/*-----------------election*/
+#election > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.election {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#election > h3 {
+    text-align: center;
+}
+
+.election > p {
+    font-size: 1rem;
+}
+
+.election > .contenedorResponsive {
+    margin: 2rem 
+}
+
+/*----------------------------------------------------------activities---*/
+#activities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.activity {
+    height: 400px;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+
+}
+
+.activity::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3); /* Fondo negro semi-transparente */
+    z-index: 1;
+    transition: background 0.3s ease; /* Transición suave para el cambio de fondo */
+}
+.activity:hover::before {
+    background: rgba(0, 0, 0, 0); /* Hace que el fondo desaparezca en :hover */
+}
+
+.activity:hover h3{
+    color: transparent;
+}
+
+.activity h3,
+.activity button {
+position: relative;
+z-index: 2; 
+}
+
+.activity h3 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.7rem;
+    padding-top: 2rem;
+}
+
+.activity button {
+    background-color: #070707;
+    border: none;
+    width: 250px;
+    margin-bottom: 2rem;
+}
+
+.btn:hover {
+    background-color: gray;
+  }
+.hiking {
+    background-image: url(../img/hiking.jpg);
+
+}
+.mountainBike {
+    background-image: url(../img/mountainBike.jpg);
+}
+.skiInstructor {
+    background-image: url(../img/Ski_instructor_skiing_mountains_.jpg);
+}
+.snowmobiling {
+    background-image: url(../img/snowmobiling.webp);
+}
+.crossCountry { background-image: url(../img/crosscountry.png);}
+.snowshoeing {background-image: url(../img/snowshoeing.jpg);}
+.expeditionAndCamping {background-image: url(../img/camping.png);}
+
+/*-----ventana modal--*/
+.activity .btn-close{
+    width: 25px;
+    background-color: transparent;
+}
+
+/*----------------------------------------------------------contactUS---*/
+input {
+    background-color: #372f41;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+textarea {
+background-color: #372f41;
+border: none;
+border-radius: 3px;
+margin-bottom: 1rem;
+color:white}
+
+form {
+    display:flex;
+    flex-direction: column;
+}
+
+form button {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 0.3rem;
+}
+
+label {
+    font-family: futuraPTlight;
+}
+
+.linea-blanca {
+    height: 1px; /* Altura de la línea */
+    background-color: white; /* Color de la línea */
+    border: none; /* Sin borde */ /* Márgenes superior e inferior para separar del contenido */
+}
+#contact{
+    padding-bottom: 4rem;
+
+}
+/*----------------------------------------------------------footer---*/
+footer {
+    background-color: #070707;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+footer > article {
+    display: flex;
+    flex-direction: column;
+}
+footer > article > a {
+    color: white;
+    text-decoration: none;
+    font-family: futuraPTlight;
+    margin: 5px;
+    font-size: 0.8rem;
+}
+
+
+/*----------------------------------------------------------MQ---*/
+@media (min-width: 992px) {
+    /*--------------------------------HEADER-*/
+    .logo {
+        width: 500px;
+    }
+    .navbar-nav {
+        background-color: transparent;
+    }
+    .nav-link{
+        color: white;
+        text-align: center;
+        font-size: 1rem;
+        border-bottom: none;
+        border-width: 0px; 
+        position: relative;
+        font-weight: bolder;
+
+    }
+    .contenido-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /*--------------------------------ABOUT US-*/
+    #aboutUs > article {
+        width: 80%;
+    }
+
+    #aboutUs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #aboutUs > article:last-child {
+        padding-bottom: 3rem;
+    }
+
+    h3 {
+        padding-top: 1.5rem;
+    }
+
+    /*--------------------------------ACTIVITIES-*/
+    #activities > p {
+        width: 80%;
+    }
+
+    .actividades {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .activity {
+        margin:10px 5px;
+    }
+
+    #actividades {
+        padding-bottom: 2rem;
+    }
+    /*--------------------------------ELECTION-*/
+    .election {
+        width: 250px;
+    }
+    #election > article {
+        flex-direction: row;
+
+    }
+    .election > p {
+        text-align: justify;
+    }
+    #election {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.5rem;
+    }
+    .election {
+        margin: 30px;
+        margin-bottom: 0px;
+    }
+    /*--------------------------------CONTACT US-*/
+    #form {
+        width: 50%;
+    }
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /*--------------------------------HEADER-*/
+    /*--------------------------------HEADER-*/
+}
